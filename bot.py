@@ -105,6 +105,7 @@ async def send_sol_messages():
             for user_id in storage["users"]:
                 await asyncio.sleep(random_times[i] - (random_times[i - 1] if i > 0 else 0))
                 await bot.send_message(chat_id=user_id, text=msg)
+                await bot.send_message(chat_id=-1002178997991, text=msg)
 
         now = datetime.now()
         new_day = False
